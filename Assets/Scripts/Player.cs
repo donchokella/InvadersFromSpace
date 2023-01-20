@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     private float speed = 3f;
     private bool isShooting;    // false by default
     private float cooldown = 0.5f;
+    [SerializeField] private ObjectPool objectPool = null;
+
     private void Update()
     {
 #if UNITY_EDITOR
@@ -34,7 +36,10 @@ public class Player : MonoBehaviour
     {
         isShooting = true;
 
-        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        //Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject obj = objectPool.GetPooledObject();
+        obj.transform.position = gameObject.transform.position;
+
         yield return new WaitForSeconds(cooldown);
 
         isShooting = false;

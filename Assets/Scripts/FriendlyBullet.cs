@@ -10,4 +10,5 @@ public class FriendlyBullet : MonoBehaviour
     {
         transform.Translate(Vector2.up * Time.deltaTime * speed);
     }
+
 }
