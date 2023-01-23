@@ -11,4 +11,9 @@ public class FriendlyBullet : MonoBehaviour
         transform.Translate(Vector2.up * Time.deltaTime * speed);
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+
+    }
+
 }
