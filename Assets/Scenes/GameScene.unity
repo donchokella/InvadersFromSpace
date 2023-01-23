@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 2575498923389581504, guid: d23c5e3afe5ce9b418a3cfc8e329fb39, type: 3}
       propertyPath: objectPool
       value: 
-      objectReference: {fileID: 1824451968}
+      objectReference: {fileID: 1105711766}
     - target: {fileID: 4126638367476839044, guid: d23c5e3afe5ce9b418a3cfc8e329fb39, type: 3}
       propertyPath: m_Name
       value: PlayerShip
@@ -1012,6 +1012,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5570901915001940351, guid: 40f34c1cd32cbbb439b0055d820d96fb, type: 3}
   m_PrefabInstance: {fileID: 1126138375}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1105711760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4126638367476839044, guid: d23c5e3afe5ce9b418a3cfc8e329fb39, type: 3}
+  m_PrefabInstance: {fileID: 298186924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1105711766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105711760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4bcebba0c2d5643a61819e56db8e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 1804838811590464394, guid: 7fb30ab72c4ac3d459479c75fc09db98, type: 3}
+  poolSize: 5
 --- !u!1001 &1126138375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1415,7 +1434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1824451968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1512,6 +1531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917801943}
   - component: {fileID: 1917801944}
+  - component: {fileID: 1917801945}
   m_Layer: 0
   m_Name: AlienParent
   m_TagString: Untagged
@@ -1571,7 +1591,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86ee97b6fbfcd446b1d4f99d89c3894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4059323327101408584, guid: 164cdf7cf8e8ecf4685c93241aa3b293, type: 3}
+  bulletPrefab: {fileID: 1917801942}
+  objectPool: {fileID: 1917801945}
+--- !u!114 &1917801945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917801942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4bcebba0c2d5643a61819e56db8e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 4059323327101408584, guid: 164cdf7cf8e8ecf4685c93241aa3b293, type: 3}
+  poolSize: 2
 --- !u!4 &1965342079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5570901915001940351, guid: 40f34c1cd32cbbb439b0055d820d96fb, type: 3}

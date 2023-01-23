@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8295903565134535163}
   - component: {fileID: 7600050456616002646}
   - component: {fileID: 5060843335354960208}
-  - component: {fileID: 3604038782704586171}
+  - component: {fileID: -784151599018717593}
   m_Layer: 0
   m_Name: FriendlyBullet
   m_TagString: Untagged
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63db67902b9ee7048b5c3c344451af0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3604038782704586171
+--- !u!114 &-784151599018717593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804838811590464394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59552c43c67ec1841ac420a8616fb7f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3643f41e9c930444f99ab2a32c769c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 2
+  bulletDeactivatePos: 6

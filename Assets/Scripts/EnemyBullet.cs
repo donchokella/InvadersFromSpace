@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FriendlyBullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
-    private float speed = 10f;
+    private float speed = 5f;
 
     private void Update()
     {
-        transform.Translate(Vector2.up * Time.deltaTime * speed);
+        transform.Translate(Vector2.down * Time.deltaTime * speed);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

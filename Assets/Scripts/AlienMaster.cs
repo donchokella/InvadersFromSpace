@@ -21,7 +21,13 @@ public class AlienMaster : MonoBehaviour
 
     private const float MAX_MOVE_SPEED = 0.02f;
 
-    private void Start()
+
+    private float shootTimer = 3f;
+    private const float ShootTime = 3f;
+
+    [SerializeField] private ObjectPool objectPool = null;
+
+    void Start()
     {
         foreach (GameObject gameObj in GameObject.FindGameObjectsWithTag("Alien"))
         {
@@ -29,13 +35,20 @@ public class AlienMaster : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         if (moveTimer <= 0)
         {
             MoveEnemies();
         }
+
+        if (shootTimer <= 0)
+        {
+            Shoot();
+        }
+
         moveTimer -= Time.deltaTime;
+        shootTimer -= Time.deltaTime;
     }
 
     private void MoveEnemies()
@@ -85,5 +98,19 @@ public class AlienMaster : MonoBehaviour
         {
             return f;
         }
+    }
+
+    private void Shoot()
+    {
+        Vector2 pos = allAliens[Random.Range(0, allAliens.Count)].transform.position;
+
+        //Instantiate(bulletPrefab, pos, Quaternion.identity);
+        GameObject obj = objectPool.GetPooledObject();
+        obj.transform.position = pos;
+
+        //yield return new WaitForSeconds(cooldown);
+
+
+        shootTimer = ShootTime;
     }
 }
