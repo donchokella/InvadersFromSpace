@@ -282,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8278948283014412340, guid: d23c5e3afe5ce9b418a3cfc8e329fb39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8278948283014412340, guid: d23c5e3afe5ce9b418a3cfc8e329fb39, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1547,7 +1547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917801942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1593,6 +1593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1917801942}
   objectPool: {fileID: 1917801945}
+  motherShipPrefab: {fileID: 7038123230446892213, guid: e4a618467a156aa42b0270c76e9533fe, type: 3}
 --- !u!114 &1917801945
 MonoBehaviour:
   m_ObjectHideFlags: 0
