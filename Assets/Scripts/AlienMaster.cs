@@ -27,6 +27,12 @@ public class AlienMaster : MonoBehaviour
 
     [SerializeField] private ObjectPool objectPool = null;
 
+
+    public GameObject motherShipPrefab;
+    private Vector3 motherShipSpawnPos = new Vector3(3, 3.5f, 0);
+    private float motherShipTimer = 1f;
+    private const float MOTHERSHIP_MIN = 15f;
+    private const float MOTHERSHIP_MAX = 60f;
     void Start()
     {
         foreach (GameObject gameObj in GameObject.FindGameObjectsWithTag("Alien"))
@@ -49,6 +55,14 @@ public class AlienMaster : MonoBehaviour
 
         moveTimer -= Time.deltaTime;
         shootTimer -= Time.deltaTime;
+
+
+        if (motherShipTimer <= 0)
+        {
+            SpawnMotherShip();
+        }
+
+        motherShipTimer -= Time.deltaTime;
     }
 
     private void MoveEnemies()
@@ -112,5 +126,11 @@ public class AlienMaster : MonoBehaviour
 
 
         shootTimer = ShootTime;
+    }
+
+    private void SpawnMotherShip()
+    {
+        Instantiate(motherShipPrefab, motherShipSpawnPos, Quaternion.identity);
+        motherShipTimer = Random.Range(MOTHERSHIP_MIN, MOTHERSHIP_MAX);
     }
 }
