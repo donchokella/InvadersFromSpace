@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2859617616218282071}
   - component: {fileID: 981774776749424443}
   m_Layer: 0
-  m_Name: EnemyBullet_01
+  m_Name: EnemyBullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 4059323327101408584}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
