@@ -9,8 +9,8 @@ public class AlienMaster : MonoBehaviour
     private Vector3 hMoveDist = new Vector3(0.05f, 0, 0);
     private Vector3 vMoveDist = new Vector3(0, 0.15f, 0);
 
-    private const float MAX_LEFT = -2f;
-    private const float MAX_RIGHT = 2f;
+    private const float MAX_LEFT = -3.4f;
+    private const float MAX_RIGHT = 3.4f;
 
     public static List<GameObject> allAliens = new List<GameObject>();
 
@@ -29,7 +29,7 @@ public class AlienMaster : MonoBehaviour
 
 
     public GameObject motherShipPrefab;
-    private Vector3 motherShipSpawnPos = new Vector3(3, 3.5f, 0);
+    private Vector3 motherShipSpawnPos = new Vector3(3, 7.8f, 0);
     private float motherShipTimer = 1f;
     private const float MOTHERSHIP_MIN = 15f;
     private const float MOTHERSHIP_MAX = 60f;
