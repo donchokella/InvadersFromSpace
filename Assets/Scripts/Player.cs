@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     private Vector2 offScreenPos = new Vector2(0, -20);
     private Vector2 startPos = new Vector2(0, -4f);
 
+
+    private float dirx;
+
     private void Start()
     {
         shipStats.currentHealth = shipStats.maxHealth;
@@ -45,6 +48,17 @@ public class Player : MonoBehaviour
             StartCoroutine(Shoot());
         }
 #endif
+
+        dirx = Input.acceleration.x;
+        //Debug.Log(dirx);
+        if (dirx <= -0.1f && transform.position.x > minX)
+        {
+            transform.Translate(Vector2.left * Time.deltaTime * shipStats.shipSpeed);
+        }
+        else if (dirx >= 0.1f && transform.position.x < maxX)
+        {
+            transform.Translate(Vector2.right * Time.deltaTime * shipStats.shipSpeed);
+        }
     }
 
     private IEnumerator Shoot()
@@ -102,5 +116,13 @@ public class Player : MonoBehaviour
 
 
         UIManager.UpdateHealthBar(shipStats.currentHealth);
+    }
+
+    public void ShootButton()
+    {
+        if (!isShooting)
+        {
+            StartCoroutine(Shoot());
+        }
     }
 }
