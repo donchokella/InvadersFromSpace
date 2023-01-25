@@ -14,5 +14,10 @@ public class Alien : MonoBehaviour
         gameObject.SetActive(false);
 
         UIManager.UpdateScore(scoreValue);
+
+        if (AlienMaster.allAliens.Count == 0)
+        {
+            GameManager.SpawnNewWave();
+        }
     }
 }
