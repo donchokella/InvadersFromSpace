@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3643f41e9c930444f99ab2a32c769c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDeactivatePos: 6
+  bulletDeactivatePos: 10
 --- !u!50 &5608582928230063659
 Rigidbody2D:
   serializedVersion: 4

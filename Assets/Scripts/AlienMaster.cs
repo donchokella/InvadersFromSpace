@@ -22,8 +22,8 @@ public class AlienMaster : MonoBehaviour
     private const float MAX_MOVE_SPEED = 0.02f;
 
 
-    private float shootTimer = 3f;
-    private const float ShootTime = 3f;
+    private float shootTimer = 1f;
+    private const float ShootTime = 1f;
 
     [SerializeField] private ObjectPool objectPool = null;
 

@@ -6,8 +6,8 @@ public class Player : MonoBehaviour
 {
     public GameObject bulletPrefab;
 
-    private const float maxX = 2.18f;
-    private const float minX = -2.18f;
+    private const float maxX = 3.6f;
+    private const float minX = -3.6f;
 
     //private float speed = 3f;
     private bool isShooting;    // false by default
@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
         shipStats.currentHealth = shipStats.maxHealth;
         shipStats.currentLife = shipStats.maxLifes;
         transform.position = startPos;
+
+        UIManager.UpdateHealthBar(shipStats.currentHealth);
+        UIManager.UpdateLives(shipStats.currentLife);
     }
 
     private void Update()
@@ -69,10 +72,12 @@ public class Player : MonoBehaviour
     public void TakeDamage()
     {
         shipStats.currentHealth--;
+        UIManager.UpdateHealthBar(shipStats.currentHealth);
 
         if (shipStats.currentHealth <= 0)
         {
             shipStats.currentLife--;
+            UIManager.UpdateLives(shipStats.currentLife);
             if (shipStats.currentLife <= 0)
             {
                 Debug.Log("gameover");
@@ -94,5 +99,8 @@ public class Player : MonoBehaviour
         shipStats.currentHealth = shipStats.maxHealth;
 
         transform.position = startPos;
+
+
+        UIManager.UpdateHealthBar(shipStats.currentHealth);
     }
 }
