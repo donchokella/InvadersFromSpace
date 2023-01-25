@@ -6,8 +6,8 @@ public class MotherShip : MonoBehaviour
 {
     public int scoreValue;
 
-    private const float MAX_LEFT = -3;
-    private float speed = 5;
+    private const float MAX_LEFT = -5;
+    private float speed = 3;
 
     private void Update()
     {
