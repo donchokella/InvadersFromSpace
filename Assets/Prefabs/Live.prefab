@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1469065513908167185}
   - component: {fileID: 7446153597454502092}
   - component: {fileID: 6553203832647031823}
+  - component: {fileID: -8175505851189528205}
+  - component: {fileID: 6497515049688861885}
   m_Layer: 0
   m_Name: Live
   m_TagString: Untagged
@@ -144,3 +146,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8175505851189528205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519615382952721843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2dcae6fd39d5f419e4dfe6d92791ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 5
+--- !u!114 &6497515049688861885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519615382952721843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59552c43c67ec1841ac420a8616fb7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 3

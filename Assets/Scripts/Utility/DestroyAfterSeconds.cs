@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class DestroyAfterSeconds : MonoBehaviour
 {
-    public float seconds = 2f;
+    public float seconds = 3f;
 
     private void Start()
     {
-        //Destroy(gameObject, seconds);
-
-    }
-
-    private void Update()
-    {
-        if (transform.position.y > 7f)
-        {
-            gameObject.SetActive(false);
-        }
+        Destroy(gameObject, seconds);
     }
 }
